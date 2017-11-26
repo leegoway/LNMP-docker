@@ -44,11 +44,16 @@ working with LNMP images
 **编译安装过程**
 1. yum install -y epel-release
 2. yum install gcc gcc-c++ libxml2 libxml2-devel openssl openssl-devel bzip2 bzip2-devel libcurl libcurl-devel libjpeg libjpeg-devel libpng libpng-devel freetype freetype-devel gmp gmp-devel libmcrypt libmcrypt-devel readline readline-devel libxslt libxslt-devel 
-3. make && make install 
-4. 制作配置文件和启动脚本
+3. ./configure --prefix=/usr/local/php --with-mysql-sock=/var/run/mysql/mysql.sock --with-mcrypt=/usr/local/libmcrypt/ --with-mhash  --with-openssl --with-mysqli=shared,mysqlnd --with-pdo-mysql=shared,mysqlnd --with-gd --with-iconv --with-zlib --enable-zip --enable-inline-optimization --disable-debug --disable-rpath --enable-shared --enable-xml --enable-bcmath --enable-shmop --enable-sysvsem --enable-mbregex --enable-mbstring  --enable-ftp --enable-gd-native-ttf --enable-pcntl --enable-sockets --with-xmlrpc --enable-soap --without-pear --with-gettext --enable-session --with-curl --with-jpeg-dir --with-freetype-dir --enable-opcache --enable-fpm   --without-gdbm  --disable-fileinfo --enable-soap --with-libxml-dir --with-xmlrpc
+4. make && make install 
+5. 添加到环境变量 ~/.bash_profile 
+6. 制作配置文件和启动脚本
 
 **数据**
-
+1. 日志目录
+/usr/local/php/var
+2. 配置目录
+/usr/local/php/etc
 
 ### Mysql服务
 
