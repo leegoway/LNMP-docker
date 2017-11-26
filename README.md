@@ -38,6 +38,17 @@ working with LNMP images
 
 ### PHP服务
 **需求**
+1. 开机自启动php-fpm
+2. 配置文件和日志映射到主机上
+
+**编译安装过程**
+1. yum install -y epel-release
+2. yum install gcc gcc-c++ libxml2 libxml2-devel openssl openssl-devel bzip2 bzip2-devel libcurl libcurl-devel libjpeg libjpeg-devel libpng libpng-devel freetype freetype-devel gmp gmp-devel libmcrypt libmcrypt-devel readline readline-devel libxslt libxslt-devel 
+3. make && make install 
+4. 制作配置文件和启动脚本
+
+**数据**
+
 
 ### Mysql服务
 

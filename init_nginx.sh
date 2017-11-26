@@ -8,7 +8,7 @@ docker run \
 --name nginx \
 -h nginx \
 --privileged \
--p 8864:80 \
+-p 80:80 \
 -v $nginx/log:/var/log/nginx \
 -v $nginx/conf:/etc/nginx/conf.d \
 -v $www:/var/www/html \
