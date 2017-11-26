@@ -42,3 +42,22 @@ working with LNMP images
 ### Mysql服务
 
 ### Redis服务
+**需求**
+1. 开启自启动Redis
+2. 配置文件和日志目录映射到主机上
+
+**安装过程**
+1. yum install epel-release
+2. yum -y install redis
+3. 制作项目配置文件，参考redis/conf
+4. 制作redis启动脚本，参考init_redis.sh
+
+**数据**
+1. 日志目录
+/var/log/redis/redis.log
+2. 配置目录
+/etc/redis/6379.conf
+3. PID目录
+/var/log/redis/6379.pid
+4. 数据目录
+/var/lib/redis
